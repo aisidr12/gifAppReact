@@ -7,6 +7,12 @@
     padding: 60px;
   }
   
+  button {
+    padding: 4px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
   input {
     background-color: white;
     border-radius: 5px;
