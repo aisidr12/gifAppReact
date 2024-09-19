@@ -7,11 +7,14 @@ export const GifGrid = ({ category  }) => {
     //Use effect se usa solo para cuando el componente se utiliza por primera vez,
     // digamos que esto evita que se repita la llamada multiples veces
 
-    const  {mages, isLoading } = useFechGifs( category );
+    const  {images, isLoading } = useFechGifs( category );
     
     return (
     <>
         <h3> { category } </h3>
+        {
+            isLoading && (<h1>Loading</h1>)
+        }
         <div className='card-grid'> 
             {
                 images.map( image => 
