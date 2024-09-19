@@ -6,3 +6,11 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+This application is a small application about looking new Gifs, this app is base in JSX an JavaScript.
+this is done with yarn.
+
+In case, we deploy this app. we should follow the steps:
+
+yarn build  -- prepare the package which generate dist folder.
+we can use the dist folder in the server where we want to deploy. 
