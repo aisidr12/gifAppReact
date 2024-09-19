@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from "react"
-import { AddCategory } from "./components/AddCategory";
-import { GifGrid } from "./components/GifGrid";
+import { AddCategory, GifGrid} from "./components";
 
 
 export const GifExpertApp = () => {
@@ -8,7 +7,6 @@ export const GifExpertApp = () => {
     const [ categories, setCategories ] = useState(['One Punch']);
 
     const onAddCategory = ( newCategory ) => {
-        console.log(' button presionado ');
         //categories.push('valorant')
        // setCategories([ newCategory, ...categories]);
        if(categories.includes(newCategory)) return;
@@ -17,7 +15,7 @@ export const GifExpertApp = () => {
 
 return ( 
     <>
-    <h1>GifExpertApp</h1>
+    <h1>GifExpert - App</h1>
     <AddCategory
      onNewCategory =  { ( value ) => onAddCategory( value) }
    // setCategories= { setCategories } 
