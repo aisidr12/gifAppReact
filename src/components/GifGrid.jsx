@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import { getGifts } from '../helpers/getGifs'
+import { GifItem } from './GifItem'
 
 export const GifGrid = ({ category  }) => {
     //Use effect se usa solo para cuando el componente se utiliza por primera vez,
@@ -20,12 +21,15 @@ export const GifGrid = ({ category  }) => {
     return (
     <>
         <h3> { category } </h3>
-        <ol>
+        <div className='card-grid'> 
             {
                 images.map( image => 
-                     <li key={ image.id }> { image.title }  </li>)
+                     <GifItem key={ image.id }
+                       {... image} //Esto hace que envie todas las propiedades del objeto.
+                     />
+                    )
             }
-        </ol>
+        </div>
     </>
     )
 }
