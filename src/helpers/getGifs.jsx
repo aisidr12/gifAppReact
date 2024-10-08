@@ -1,6 +1,6 @@
 export const getGifts = async (category) => {
-    const apiKey ='fake';
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}=${ category }&limit=10`
+    const apiKey = `${import.meta.env.VITE_KEY_API}`;
+    const url = `${import.meta.env.VITE_API_URL}/search?api_key=${apiKey}=${ category }&limit=10`
     const resp = await fetch( url );
     const { data } = await resp.json();
 
